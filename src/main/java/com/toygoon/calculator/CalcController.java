@@ -8,14 +8,17 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 
 public class CalcController {
+    private String inputText = "";
+
     @FXML
-    private TextField numfield;
+    private TextField field_calc;
 
     @FXML
     public void numHandler(ActionEvent event) {
         Node node = (Node) event.getSource();
         String data = (String) node.getUserData();
 
-        numfield.setText(data);
+        inputText += data;
+        field_calc.setText(inputText);
     }
 }

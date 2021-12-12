@@ -24,17 +24,17 @@
                            <children>
                               <HBox layoutX="10.0" layoutY="10.0" maxWidth="210.0" prefHeight="70.0" prefWidth="210.0">
                                  <children>
-                                    <Button fx:id="opr_c" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="C">
+                                    <Button fx:id="opr_c" userData="C" mnemonicParsing="false" onAction="#numHandler" prefHeight="70.0" prefWidth="70.0" text="C">
                                        <font>
                                           <Font name="D2Coding" size="18.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="opr_pl" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="+/-">
+                                    <Button fx:id="opr_pl" userData="+" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="70.0" prefWidth="70.0" text="+/-">
                                        <font>
                                           <Font name="D2Coding" size="18.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="opr_mod" layoutX="80.0" layoutY="10.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="\%">
+                                    <Button fx:id="opr_mod" layoutX="80.0" layoutY="10.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="70.0" prefWidth="70.0" text="\%">
                                        <font>
                                           <Font name="D2Coding" size="18.0" />
                                        </font>
@@ -43,36 +43,17 @@
                               </HBox>
                               <HBox maxWidth="210.0" prefHeight="70.0" prefWidth="210.0">
                                  <children>
-                                    <Button fx:id="num_7" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="7">
+                                    <Button fx:id="num_7" userData="7" mnemonicParsing="false" onAction="#numHandler" prefHeight="70.0" prefWidth="70.0" text="7">
                                        <font>
                                           <Font name="D2Coding" size="18.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="num_8" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="8">
+                                    <Button fx:id="num_8" userData="8" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="70.0" prefWidth="70.0" text="8">
                                        <font>
                                           <Font name="D2Coding" size="18.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="num_9" layoutX="80.0" layoutY="10.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="9">
-                                       <font>
-                                          <Font name="D2Coding" size="18.0" />
-                                       </font>
-                                    </Button>
-                                 </children>
-                              </HBox>
-                              <HBox layoutX="10.0" layoutY="10.0" maxWidth="210.0" prefHeight="70.0" prefWidth="210.0">
-                                 <children>
-                                    <Button fx:id="num_4" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="4">
-                                       <font>
-                                          <Font name="D2Coding" size="18.0" />
-                                       </font>
-                                    </Button>
-                                    <Button fx:id="num_5" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="5">
-                                       <font>
-                                          <Font name="D2Coding" size="18.0" />
-                                       </font>
-                                    </Button>
-                                    <Button fx:id="num_6" layoutX="80.0" layoutY="10.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="6">
+                                    <Button fx:id="num_9" userData="9" layoutX="80.0" layoutY="10.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="70.0" prefWidth="70.0" text="9">
                                        <font>
                                           <Font name="D2Coding" size="18.0" />
                                        </font>
@@ -81,17 +62,36 @@
                               </HBox>
                               <HBox layoutX="10.0" layoutY="10.0" maxWidth="210.0" prefHeight="70.0" prefWidth="210.0">
                                  <children>
-                                    <Button fx:id="num_1" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="1">
+                                    <Button fx:id="num_4" userData="4" mnemonicParsing="false" onAction="#numHandler" prefHeight="70.0" prefWidth="70.0" text="4">
                                        <font>
                                           <Font name="D2Coding" size="18.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="num_2" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="2">
+                                    <Button fx:id="num_5" userData="5" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="70.0" prefWidth="70.0" text="5">
                                        <font>
                                           <Font name="D2Coding" size="18.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="num_3" layoutX="80.0" layoutY="10.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="3">
+                                    <Button fx:id="num_6" userData="6" layoutX="80.0" layoutY="10.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="70.0" prefWidth="70.0" text="6">
+                                       <font>
+                                          <Font name="D2Coding" size="18.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" maxWidth="210.0" prefHeight="70.0" prefWidth="210.0">
+                                 <children>
+                                    <Button fx:id="num_1" userData="1" mnemonicParsing="false" onAction="#numHandler" prefHeight="70.0" prefWidth="70.0" text="1">
+                                       <font>
+                                          <Font name="D2Coding" size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="num_2" userData="2"  layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="70.0" prefWidth="70.0" text="2">
+                                       <font>
+                                          <Font name="D2Coding" size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="num_3" userData="3" layoutX="80.0" layoutY="10.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="70.0" prefWidth="70.0" text="3">
                                        <font>
                                           <Font name="D2Coding" size="18.0" />
                                        </font>
@@ -100,12 +100,12 @@
                               </HBox>
                               <HBox layoutX="10.0" layoutY="150.0" maxWidth="210.0" prefHeight="70.0" prefWidth="210.0">
                                  <children>
-                                    <Button fx:id="num_0" mnemonicParsing="false" prefHeight="70.0" prefWidth="140.0" text="0">
+                                    <Button fx:id="num_0" userData="0" mnemonicParsing="false" onAction="#numHandler" prefHeight="70.0" prefWidth="140.0" text="0">
                                        <font>
                                           <Font name="D2Coding" size="18.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="opr_dot" layoutX="80.0" layoutY="10.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text=".">
+                                    <Button fx:id="opr_dot" layoutX="80.0" layoutY="10.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="70.0" prefWidth="70.0" text=".">
                                        <font>
                                           <Font name="D2Coding" size="18.0" />
                                        </font>
@@ -116,27 +116,27 @@
                         </VBox>
                         <VBox layoutX="10.0" layoutY="10.0" maxHeight="350.0" maxWidth="70.0" minHeight="350.0" minWidth="70.0" prefHeight="350.0" prefWidth="70.0">
                            <children>
-                              <Button fx:id="opr_div" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="÷">
+                              <Button fx:id="opr_div" mnemonicParsing="false" onAction="#numHandler" prefHeight="70.0" prefWidth="70.0" text="÷">
                                  <font>
                                     <Font name="D2Coding" size="18.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="opr_mul" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="×">
+                              <Button fx:id="opr_mul" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="70.0" prefWidth="70.0" text="×">
                                  <font>
                                     <Font name="D2Coding" size="18.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="opr_minus" layoutX="10.0" layoutY="80.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="−">
+                              <Button fx:id="opr_minus"  layoutX="10.0" layoutY="80.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="70.0" prefWidth="70.0" text="−">
                                  <font>
                                     <Font name="D2Coding" size="18.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="opr_plus" layoutX="10.0" layoutY="150.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="+">
+                              <Button fx:id="opr_plus" layoutX="10.0" layoutY="150.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="70.0" prefWidth="70.0" text="+">
                                  <font>
                                     <Font name="D2Coding" size="18.0" />
                                  </font>
                               </Button>
-                              <Button fx:id="opr_equal" layoutX="10.0" layoutY="220.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="70.0" text="=">
+                              <Button fx:id="opr_equal" layoutX="10.0" layoutY="220.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="70.0" prefWidth="70.0" text="=">
                                  <font>
                                     <Font name="D2Coding" size="18.0" />
                                  </font>
