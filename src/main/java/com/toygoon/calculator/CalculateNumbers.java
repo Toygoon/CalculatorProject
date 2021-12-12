@@ -3,7 +3,7 @@ package com.toygoon.calculator;
 import java.util.Stack;
 
 public class CalculateNumbers {
-    private static final String[] OPERANDS = {"PLUS", "MINUS", "MULTIPLE", "DIVIDE", "MOD", "NEGATIVE", "EQUAL", "CLEAR"};
+    private static final String[] OPERANDS = {"PLUS", "MINUS", "MULTIPLE", "DIVIDE", "MOD", "NEGATIVE"};
 
     public static boolean isOperands(String input) {
         for(String s : OPERANDS) {
@@ -21,12 +21,13 @@ public class CalculateNumbers {
             case "MULTIPLE" -> "×";
             case "DIVIDE" -> "÷";
             case "MOD" -> "%";
-            case "EQUAL" -> "=";
             default -> null;
         };
     }
 
     public static String calcResults(String first, String second, String operand) {
+        if(first.equals("") || second.equals(""))
+            return first + second;
         double a = Double.parseDouble(first);
         double b = Double.parseDouble(second);
         double result = 0;

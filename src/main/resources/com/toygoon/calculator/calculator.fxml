@@ -114,7 +114,7 @@
                                           <Font name="D2Coding" size="18.0" />
                                        </font>
                                     </Button>
-                                    <Button fx:id="opr_dot" layoutX="80.0" layoutY="10.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="70.0" prefWidth="70.0" text="." userData=".">
+                                    <Button fx:id="opr_dot" layoutX="80.0" layoutY="10.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="70.0" prefWidth="70.0" text="." userData="DOT">
                                        <font>
                                           <Font name="D2Coding" size="18.0" />
                                        </font>
