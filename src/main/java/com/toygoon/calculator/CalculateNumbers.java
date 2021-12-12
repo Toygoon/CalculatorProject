@@ -38,6 +38,11 @@ public class CalculateNumbers {
         // 결과를 저장할 변수
         double result = 0;
 
+        // 0으로는 나눌 수 없음
+        if(operand.equals("DIVIDE") && (a == 0 || b == 0)) {
+            return "0";
+        }
+
         // 연산자에 따라 연산 방식을 달리함
         switch(operand) {
             case "PLUS" -> result = a+b;
