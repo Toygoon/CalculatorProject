@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.toygoon.calculator.CalcController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="516.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.toygoon.calculator.CalcController">
+   <children>
+      <SplitPane dividerPositions="0.38715953307393" orientation="VERTICAL" prefHeight="400.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <TextField fx:id="numfield" layoutX="14.0" layoutY="146.0" prefHeight="36.0" prefWidth="200.0" />
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="318.0" prefWidth="598.0">
+               <children>
+                  <GridPane alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="141.0" prefWidth="200.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button userData="7" fx:id="num7" layoutX="10.0" layoutY="116.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="63.0" prefWidth="66.0" text="7" />
+                        <Button userData="8" fx:id="num8" mnemonicParsing="false" onAction="#numHandler" prefHeight="63.0" prefWidth="66.0" text="8" GridPane.columnIndex="1" />
+                        <Button userData="9" fx:id="num9" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="63.0" prefWidth="66.0" text="9" GridPane.columnIndex="2" />
+                        <Button userData="4" fx:id="num4" mnemonicParsing="false" onAction="#numHandler" prefHeight="63.0" prefWidth="66.0" text="4" GridPane.rowIndex="1" />
+                        <Button userData="5" fx:id="num5" layoutX="10.0" layoutY="46.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="63.0" prefWidth="66.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Button userData="6" fx:id="num6" layoutX="76.0" layoutY="46.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="63.0" prefWidth="66.0" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Button userData="1" fx:id="num1" layoutX="10.0" layoutY="46.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="63.0" prefWidth="66.0" text="1" GridPane.rowIndex="2" />
+                        <Button userData="2" fx:id="num2" layoutX="10.0" layoutY="81.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="63.0" prefWidth="66.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Button userData="3" fx:id="num3" layoutX="76.0" layoutY="81.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="63.0" prefWidth="66.0" text="3" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Button userData="+" fx:id="numpm" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="63.0" prefWidth="66.0" text="+/-" GridPane.rowIndex="3" />
+                        <Button userData="0" fx:id="num0" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="63.0" prefWidth="66.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Button userData="." fx:id="numdot" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="63.0" prefWidth="66.0" text="." GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                     </children>
+                  </GridPane>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
 </AnchorPane>
