@@ -85,6 +85,15 @@ public class CalcController {
                 // 입력 이후 isDotPressed 변수를 초기화
                 isDotPressed = true;
             }
+            // field의 값을 직접 수정했을 경우가 있으므로, field의 값을 다시 확인하여 isDotPressed를 한 번 더 변경
+            if(field_calc.getText().contains(".")) {
+                // 확인하여 isDotPressed의 값을 갱신
+                isDotPressed = true;
+            } else {
+                // field의 값이 지워진 경우, 새로 입력
+                field_calc.setText(field_calc.getText() + ".");
+                isDotPressed = true;
+            }
         } else if(isOperands(data)) {
             /* 연산자를 입력 받은 경우 */
             // 이미 연산 중인 연산자가 존재하고, 새로운 값을 입력 받은 후에는 이전 연산을 완료하도록 함
