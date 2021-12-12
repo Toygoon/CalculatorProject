@@ -26,12 +26,12 @@ public class CalcMain extends Application {
         // FXMLLoader를 통해 Layout의 FXML을 불러옴
         FXMLLoader fxmlLoader = new FXMLLoader(CalcMain.class.getResource("calculator.fxml"));
         // Scene을 통해 Window 생성
-        Scene scene = new Scene(fxmlLoader.load(), 640, 480);
+        Scene scene = new Scene(fxmlLoader.load(), 640, 800);
 
         // Scene의 각종 정보 설정 (타이틀, 스타일, 사이즈 재조정 가능여부, 현재 Scene)
         stage.setTitle("Calculator");
         stage.initStyle(StageStyle.UTILITY);
-        stage.setResizable(false);
+        //stage.setResizable(false);
         stage.setScene(scene);
 
         // launch() 호출 시 작동할 show()

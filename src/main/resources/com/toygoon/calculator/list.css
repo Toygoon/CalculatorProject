@@ -1,3 +1,14 @@
 .list-cell {
     -fx-font-size: 1.5em ;
 }
+
+.split-pane:horizontal > .split-pane-divider {
+    -fx-background-color: transparent;
+}
+.split-pane:vertical > .split-pane-divider {
+    -fx-background-color: transparent;
+}
+
+.split-pane-divider {
+    -fx-padding: 0 ;
+}

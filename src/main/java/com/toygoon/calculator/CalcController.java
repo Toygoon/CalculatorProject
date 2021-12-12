@@ -37,7 +37,6 @@ public class CalcController {
 
         if(data.equals("CLEAR")) {
             /* C를 눌렀을 경우 */
-
             // 각 요소 초기화
             operand = "";
             prevNum = "";
@@ -52,21 +51,30 @@ public class CalcController {
             /* =를 눌렀을 경우 */
             // 만약 연산 중이라면, 연산 결과를 출력하는 작업 수행
             if(isOperating) {
-                // (list_history용) 이전까지의 연산 결과를 저장하는 값
-                String tmp = list_history.getItems().get(listTop);
-                // 결과를 result 변수에 저장
-                String result = calcResults(prevNum, field_calc.getText(), operand);
-                // 이전의 연산 중인 식을 목록에서 수정하기 위해, 삭제 후 새로 추가
-                list_history.getItems().remove(listTop);
-                list_history.getItems().add(listTop, tmp + field_calc.getText() + " = " + result);
+                if(field_calc.getText().equals("")) {
+                    // 이전에 입력한 연산자 없이 피연산자만 있는 경우, 피연산자를 출력함
+                    field_calc.setText(prevNum);
+                    // 피연산자만 있으므로, 연산 중인 상태가 아님
+                    isOperating = false;
+                    // 현재 list의 내용은 중간 과정이므로, 이를 삭제
+                    list_history.getItems().remove(listTop);
+                } else {
+                    // (list_history용) 이전까지의 연산 결과를 저장하는 값
+                    String tmp = list_history.getItems().get(listTop);
+                    // 결과를 result 변수에 저장
+                    String result = calcResults(prevNum, field_calc.getText(), operand);
+                    // 이전의 연산 중인 식을 목록에서 수정하기 위해, 삭제 후 새로 추가
+                    list_history.getItems().remove(listTop);
+                    list_history.getItems().add(listTop, tmp + field_calc.getText() + " = " + result);
 
-                // 연산 결과를 저장
-                field_calc.setText(result);
+                    // 연산 결과를 저장
+                    field_calc.setText(result);
 
-                // 연산이 한 번 끝났으므로, isOperating 변수를 false로 설정하여 연산 중인 상태를 종료
-                isOperating = false;
-                // listTop을 증가시켜 새로운 리스트 순번을 이용하게 함
-                listTop++;
+                    // 연산이 한 번 끝났으므로, isOperating 변수를 false로 설정하여 연산 중인 상태를 종료
+                    isOperating = false;
+                    // listTop을 증가시켜 새로운 리스트 순번을 이용하게 함
+                    listTop++;
+                }
             }
         } else if(data.equals("DOT")) {
             /* .을 눌렀을 경우 */
