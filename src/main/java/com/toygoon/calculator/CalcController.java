@@ -81,7 +81,7 @@ public class CalcController {
             /* 연산자를 입력 받은 경우 */
             // 이미 연산 중인 연산자가 존재하고, 새로운 값을 입력 받은 후에는 이전 연산을 완료하도록 함
             if(isOperating) {
-                if(prevNum.equals("")) {
+                if(field_calc.getText().equals("")) {
                     // 이전에 입력한 피연산자가 없다면, 연산자를 수정하는 작업만 함
                     operand = data;
                 } else {
@@ -107,16 +107,18 @@ public class CalcController {
                     list_history.getItems().add(listTop, prevNum + " " + getOperands(operand));
                 }
             } else {
-                // 그렇지 않은 경우, 이전의 피연산자와 추가하는 작업
-                prevNum = field_calc.getText();
-                // 연산자를 받아옴
-                operand = data;
-                // 새로운 피연산자를 받아오기 위해, field를 비움
-                field_calc.setText("");
-                // 연산 중인 것으로 지정
-                isOperating = true;
-                // 현재까지의 기록을 저장
-                list_history.getItems().add(listTop, prevNum + " " + getOperands(operand));
+                if(!(field_calc.getText().equals(""))) {
+                    // 그렇지 않은 경우, 이전의 피연산자와 추가하는 작업
+                    prevNum = field_calc.getText();
+                    // 연산자를 받아옴
+                    operand = data;
+                    // 새로운 피연산자를 받아오기 위해, field를 비움
+                    field_calc.setText("");
+                    // 연산 중인 것으로 지정
+                    isOperating = true;
+                    // 현재까지의 기록을 저장
+                    list_history.getItems().add(listTop, prevNum + " " + getOperands(operand));
+                }
             }
         } else {
             /* 숫자를 입력 받았을 경우 */
@@ -125,5 +127,21 @@ public class CalcController {
         }
         // 자동 스크롤을 위한 방식
         list_history.scrollTo(listTop);
+    }
+
+    /* Backspace 구현 메서드 */
+    @FXML
+    public void bsHandler() {
+        // 현재의 값을 가져옴
+        String prv = field_calc.getText();
+        // 현재 입력되어 있는 값의 length
+        int length = prv.length();
+
+        // length가 0이면 return
+        if(length == 0)
+            return;
+
+        // StringBuilder를 이용하여 맨 마지막의 글자를 지워줌
+        field_calc.setText(new StringBuilder(prv).deleteCharAt(length-1).toString());
     }
 }
