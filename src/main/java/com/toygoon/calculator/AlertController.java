@@ -1,3 +1,9 @@
+/* Calculator in JavaFX
+ *
+ * @author Lim Jung Min,
+ * Department of Computer Engineering, Yeungnam University.
+ */
+
 package com.toygoon.calculator;
 
 import javafx.scene.control.Alert;
