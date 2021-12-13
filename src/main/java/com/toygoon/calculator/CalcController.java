@@ -76,6 +76,19 @@ public class CalcController {
                     listTop++;
                 }
             }
+        } else if(data.equals("NEGATIVE")) {
+            /* 양수, 음수 변환 버튼을 눌렀을 경우 */
+            // 현재 입력된 숫자를 저장하는 변수
+            String num = field_calc.getText();
+            if(num.length() == 0) {
+                // 입력 값이 없으면 아무것도 하지 않음
+            } else if(num.charAt(0) == '-') {
+                // 음수인 경우, (맨 앞의 글자가 -인 경우) StringBuilder를 이용해 이를 삭제
+                field_calc.setText(new StringBuilder(num).deleteCharAt(0).toString());
+            } else {
+                // 양수인 경우, -만 추가
+                field_calc.setText("-" + num);
+            }
         } else if(data.equals("DOT")) {
             /* .을 눌렀을 경우 */
             // 소숫점이 여러 개 존재 할 수 없으므로, isDotPressed 변수를 이용하여 확인
@@ -97,8 +110,8 @@ public class CalcController {
         } else if(isOperands(data)) {
             /* 연산자를 입력 받은 경우 */
             // 이미 연산 중인 연산자가 존재하고, 새로운 값을 입력 받은 후에는 이전 연산을 완료하도록 함
-            if(isOperating) {
-                if(field_calc.getText().equals("")) {
+            if (isOperating) {
+                if (field_calc.getText().equals("")) {
                     // 이전에 입력한 피연산자가 없다면, 연산자를 수정하는 작업만 함
                     operand = data;
                 } else {
@@ -124,7 +137,7 @@ public class CalcController {
                     list_history.getItems().add(listTop, prevNum + " " + getOperands(operand));
                 }
             } else {
-                if(!(field_calc.getText().equals(""))) {
+                if (!(field_calc.getText().equals(""))) {
                     // 그렇지 않은 경우, 이전의 피연산자와 추가하는 작업
                     prevNum = field_calc.getText();
                     // 연산자를 받아옴
@@ -137,11 +150,22 @@ public class CalcController {
                     list_history.getItems().add(listTop, prevNum + " " + getOperands(operand));
                 }
             }
+        } else if(isFunctions(data)) {
+            /* 다른 특수 함수를 입력받은 경우 */
+            boolean isSingleFunction = isSingleFunctions(data);
+            String num = field_calc.getText();
+
+            if(!(num.equals("")) && isSingleFunction) {
+                field_calc.setText(calcFunctResults(num, null, data));
+                list_history.getItems().add(listTop, getFunctExpr(num, data) + field_calc.getText());
+                listTop++;
+            }
         } else {
             /* 숫자를 입력 받았을 경우 */
             // 이전에 입력된 값과 버튼이 눌린 값을 합침
             field_calc.setText(field_calc.getText() + data);
         }
+
         // 자동 스크롤을 위한 방식
         list_history.scrollTo(listTop);
     }

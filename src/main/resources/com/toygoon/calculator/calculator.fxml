@@ -162,6 +162,35 @@
                               </Button>
                            </children>
                         </VBox>
+                        <VBox layoutX="220.0" layoutY="10.0" maxHeight="350.0" maxWidth="70.0" minHeight="350.0" minWidth="70.0" prefHeight="350.0" prefWidth="70.0">
+                           <children>
+                              <Button fx:id="opr_sin" mnemonicParsing="false" onAction="#numHandler" prefHeight="70.0" prefWidth="70.0" text="sin" userData="SIN">
+                                 <font>
+                                    <Font name="D2Coding" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="opr_cos" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="70.0" prefWidth="70.0" text="cos" userData="COS">
+                                 <font>
+                                    <Font name="D2Coding" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="opr_tan" layoutX="10.0" layoutY="80.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="70.0" prefWidth="70.0" text="tan" userData="TAN">
+                                 <font>
+                                    <Font name="D2Coding" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="opr_fact" layoutX="10.0" layoutY="150.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="70.0" prefWidth="70.0" text="x!" userData="FACTORIAL">
+                                 <font>
+                                    <Font name="D2Coding" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="opr_sqrt" layoutX="10.0" layoutY="220.0" mnemonicParsing="false" onAction="#numHandler" prefHeight="70.0" prefWidth="70.0" text="sqrt" userData="SQRT">
+                                 <font>
+                                    <Font name="D2Coding" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
                      </children>
                   </HBox>
                </children>
