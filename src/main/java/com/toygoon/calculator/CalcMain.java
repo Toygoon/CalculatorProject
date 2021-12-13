@@ -47,6 +47,5 @@ public class CalcMain extends Application {
 
     public static void main(String[] args) {
         launch();
-        ErrorHandler errorHandler = new ErrorHandler();
     }
 }

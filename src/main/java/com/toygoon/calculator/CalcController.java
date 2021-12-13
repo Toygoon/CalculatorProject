@@ -12,6 +12,7 @@ import javafx.scene.Node;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
+import static com.toygoon.calculator.AlertController.*;
 import static com.toygoon.calculator.CalculateNumbers.*;
 
 public class CalcController {
@@ -158,11 +159,10 @@ public class CalcController {
             }
         } else if(isFunctions(data)) {
             /* 다른 특수 함수를 입력받은 경우 */
-            boolean isSingleFunction = isSingleFunctions(data);
             String num = field_calc.getText();
 
-            if(!(num.equals("")) && isSingleFunction) {
-                field_calc.setText(calcFunctResults(num, null, data));
+            if(!(num.equals(""))) {
+                field_calc.setText(calcFunctResults(num, data));
                 list_history.getItems().add(listTop, getFunctExpr(num, data) + field_calc.getText());
                 listTop++;
             }
@@ -172,6 +172,10 @@ public class CalcController {
             field_calc.setText(field_calc.getText() + data);
         }
 
+        if(field_calc.getText().equals("NaN")) {
+            showError("It's not a number.");
+            field_calc.setText("");
+        }
         // 자동 스크롤을 위한 방식
         list_history.scrollTo(listTop);
     }
@@ -190,5 +194,12 @@ public class CalcController {
 
         // StringBuilder를 이용하여 맨 마지막의 글자를 지워줌
         field_calc.setText(new StringBuilder(prv).deleteCharAt(length-1).toString());
+    }
+
+    /* Clear List 구현 메서드 */
+    @FXML
+    public void clearListHandler() {
+        list_history.getItems().remove(0, list_history.getItems().size());
+        listTop = 0;
     }
 }

@@ -6,13 +6,15 @@
 
 package com.toygoon.calculator;
 
+import static com.toygoon.calculator.AlertController.*;
+
 public class CalculateNumbers {
     // 연산자 목록
-    private static final String[] OPERANDS = {"PLUS", "MINUS", "MULTIPLE", "DIVIDE", "MOD"};
+    private static final String[] OPERANDS = {"PLUS", "MINUS", "MULTIPLE", "DIVIDE", "MOD", "AND", "OR", "NOR", "XOR", "SHIFTLEFT", "SHIFTRIGHT"};
     // 특수 함수 목록
-    private static final String[] ALL_FUNCTIONS = {"SIN", "COS", "TAN", "FACTORIAL", "SQRT"};
-    // 특수 함수 목록이면서, 단항 연산자인 연산자
-    private static final String[] SINGLE_FUNCTIONS = {"SIN", "COS", "TAN", "FACTORIAL", "SQRT"};
+    private static final String[] ALL_FUNCTIONS = {"SIN", "COS", "TAN", "FACTORIAL", "SQRT", "SECANT", "COSECANT", "COTANGENT", "COMMONLOG", "NATURALLOG", "COMPLEMENT", "LOG2"
+                                                    ,"HEXA", "BINARY", "POWER"};
+
 
     /* 연산자를 구분하는 메서드 */
     public static boolean isOperands(String input) {
@@ -34,16 +36,6 @@ public class CalculateNumbers {
         return false;
     }
 
-    /* 특수 함수 중, 단항 연산자를 확인하는 메서드 */
-    public static boolean isSingleFunctions(String input) {
-        for(String s : SINGLE_FUNCTIONS) {
-            if(input.equals(s))
-                return true;
-        }
-
-        return false;
-    }
-
     /* 팩토리얼 계산 메서드 */
     public static String getFactorial(String input) {
         String result = null;
@@ -56,13 +48,22 @@ public class CalculateNumbers {
                 res *= i;
 
             result = Double.toString(res);
+        } else if(Integer.parseInt(input) == 0) {
+            // 0과의 곱인 경우 0을 반환, 나머지 경우는 1부터 계산함
+            result = "0";
         } else {
             int a = Integer.parseInt(input), res = 1;
 
-            for(int i=1; i<=a; i++)
+            for (int i = 1; i <= a; i++)
                 res *= i;
 
             result = Integer.toString(res);
+        }
+
+        // 범위를 넘어간 경우, 오류 출력
+        // 입력 값은 0이 아니지만, 출력 값은 0인 경우 무한임
+        if(!(input.equals("0")) && result.equals("0")) {
+            showError("Factorial of " + input + " is not a number.");
         }
 
         return result;
@@ -77,6 +78,11 @@ public class CalculateNumbers {
             case "MULTIPLE" -> "×";
             case "DIVIDE" -> "÷";
             case "MOD" -> "%";
+            case "AND" -> "&";
+            case "OR" -> "|";
+            case "XOR" -> "^";
+            case "SHIFTLEFT" -> "<<";
+            case "SHIFTRIGHT" -> ">>";
             default -> null;
         };
     }
@@ -94,20 +100,28 @@ public class CalculateNumbers {
                 return num + "! = ";
             case "SQRT":
                 return "sqrt(" + num + ") = ";
+            case "SECANT":
+                return "sec(" + num + ") = ";
+            case "COSECANT":
+                return "csc(" + num + ") = ";
+            case "COTANGENT":
+                return "cot(" + num + ") = ";
+            case "COMMONLOG":
+                return "log(" + num + ") = ";
+            case "NATURALLOG":
+                return "ln(" + num + ") = ";
+            case "HEXA":
+                return "hex(" + num + ") = ";
+            case "BINARY":
+                return "bin(" + num + ") = ";
         }
 
         return null;
     }
 
-    public static String calcFunctResults(String first, String second, String funct) {
-        // 단항 연산자 구분
-        if(isSingleFunctions(funct)) {
-            second = "0";
-        }
-
-        // 첫 번째 피연산자, 두 번째 피연산자의 값을 Double로 캐스팅
+    public static String calcFunctResults(String first, String funct) {
+        // 피연산자의 값을 Double로 캐스팅
         double a = Double.parseDouble(first);
-        double b = Double.parseDouble(second);
         // 결과를 저장할 변수
         double result = 0;
 
@@ -120,6 +134,20 @@ public class CalculateNumbers {
                 return getFactorial(first);
             }
             case "SQRT" -> result = Math.sqrt(a);
+            case "SECANT" -> result = 1 / Math.sin(a);
+            case "COSECANT" -> result = 1 / Math.cos(a);
+            case "COTANGENT" -> result = 1 / Math.tan(a);
+            case "COMMONLOG" -> result = Math.log10(a);
+            case "NATURALLOG" -> result = Math.log(a);
+            case "COMPLEMENT" -> {
+                return Integer.toString(~(Integer.parseInt(first)));
+            }
+            case "HEXA" -> {
+                return Integer.toHexString(Integer.parseInt(first));
+            }
+            case "BINARY" -> {
+                return Integer.toBinaryString(Integer.parseInt(first));
+            }
         }
 
         // Int와 Double을 구분하여 String 형식으로 저장
@@ -143,6 +171,7 @@ public class CalculateNumbers {
 
         // 0으로는 나눌 수 없음
         if(operand.equals("DIVIDE") && (a == 0 || b == 0)) {
+            showError("Can't divide with 0.");
             return "0";
         }
 
@@ -153,6 +182,21 @@ public class CalculateNumbers {
             case "MULTIPLE" -> result = a*b;
             case "DIVIDE" -> result = a/b;
             case "MOD" -> result = a%b;
+            case "AND" -> {
+                return Integer.toString(Integer.parseInt(first) & Integer.parseInt(second));
+            }
+            case "OR" -> {
+                return Integer.toString(Integer.parseInt(first) | Integer.parseInt(second));
+            }
+            case "XOR" -> {
+                return Integer.toString(Integer.parseInt(first) ^ Integer.parseInt(second));
+            }
+            case "SHIFTLEFT" -> {
+                return Integer.toString(Integer.parseInt(first) << Integer.parseInt(second));
+            }
+            case "SHIFTRIGHT" -> {
+                return Integer.toString(Integer.parseInt(first) >> Integer.parseInt(second));
+            }
             default -> result = 0;
         }
 
