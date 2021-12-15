@@ -16,6 +16,7 @@ import javafx.scene.SceneAntialiasing;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
+import javafx.scene.image.Image;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
@@ -32,13 +33,17 @@ public class CalcMain extends Application {
 
         // FXMLLoader를 통해 Layout의 FXML을 불러옴
         FXMLLoader fxmlLoader = new FXMLLoader(CalcMain.class.getResource("calculator.fxml"));
+
         // Scene을 통해 Window 생성
         Scene scene = new Scene(fxmlLoader.load(), 640, 800);
 
         // Scene의 각종 정보 설정 (타이틀, 스타일, 사이즈 재조정 가능여부, 현재 Scene)
         stage.setTitle("Calculator");
         stage.initStyle(StageStyle.UTILITY);
-        //stage.setResizable(false);
+        stage.setResizable(false);
+        // Icon을 설정
+        stage.getIcons().add(new Image("file:resources/icons/21283780921537355429-512.png"));
+        // 현재의 Scene을 설정
         stage.setScene(scene);
 
         // launch() 호출 시 작동할 show()
