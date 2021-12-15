@@ -7,25 +7,22 @@
 package com.toygoon.calculator;
 
 import javafx.scene.control.Alert;
-import javafx.scene.text.Font;
 
 public class AlertController {
-    public AlertController() {
-        // Anti-Aliasing 적용
-        System.setProperty("prism.lcdtext", "false");
-        // 시스템 폰트로 D2Coding 적용
-        Font.loadFont(getClass().getResourceAsStream("/res/D2Coding-Ver1.3.2-20180524.ttf"), 10);
-    }
-
+    /* 에러를 출력하는 메서드 */
     public static void showError(String msg) {
+        // Alert 클래스 사용
         Alert alert = new Alert(Alert.AlertType.ERROR);
+        // 타이틀, 헤더 지정 후 파라미터로 메시지를 받아 출력
         alert.setTitle("Error");
         alert.setHeaderText("Calculation Error");
         alert.setContentText(msg);
 
+        // alert
         alert.showAndWait();
     }
 
+    /* 프로그램 종료를 묻는 메서드 */
     public static void confirmExit() {
 
     }
