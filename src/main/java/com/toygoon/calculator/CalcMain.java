@@ -4,24 +4,17 @@
  * Department of Computer Engineering, Yeungnam University.
  */
 
-
 package com.toygoon.calculator;
 
-import com.pixelduke.control.skin.FXSkins;
 import javafx.application.Application;
-import javafx.fxml.FXML;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.SceneAntialiasing;
-import javafx.scene.control.Button;
-import javafx.scene.control.ListView;
-import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.stage.WindowEvent;
 
 public class CalcMain extends Application {
     @Override
@@ -43,6 +36,14 @@ public class CalcMain extends Application {
         stage.setResizable(false);
         // Icon을 설정
         stage.getIcons().add(new Image("file:resources/icons/21283780921537355429-512.png"));
+        // 종료 확인을 설정
+        stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent event) {
+                new AlertController().confirmExit();
+            }
+        });
+
         // 현재의 Scene을 설정
         stage.setScene(scene);
 

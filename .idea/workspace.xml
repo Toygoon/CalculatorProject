@@ -9,7 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ead0d7fd-fe62-4952-b30f-8a19dfe41c54" name="Changes" comment="Editing .gitignore for artifact builds" />
+    <list default="true" id="ead0d7fd-fe62-4952-b30f-8a19dfe41c54" name="Changes" comment="Editing .gitignore for artifact builds">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/toygoon/calculator/AlertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/toygoon/calculator/AlertController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/toygoon/calculator/CalcController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/toygoon/calculator/CalcController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/toygoon/calculator/CalcMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/toygoon/calculator/CalcMain.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,16 +57,19 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/main/resources/com/toygoon/calculator/calculator.fxml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/gradlew" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/module-info.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/toygoon/calculator/CalcMain.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/gradlew.bat" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/build.gradle" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/toygoon/calculator/CalcController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/toygoon/calculator/CalcMain.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/gradlew" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/gradlew.bat" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/com/toygoon/calculator/calculator.fxml" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="229JReAPwTmcwinJPBJ6yqNm0Mv" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -82,6 +90,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15292233" />
     <property name="project.structure.side.proportion" value="0.51954025" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RunManager">
@@ -124,6 +133,7 @@
       <workItem from="1639490977616" duration="1445000" />
       <workItem from="1639539591345" duration="755000" />
       <workItem from="1639540418236" duration="878000" />
+      <workItem from="1640327159646" duration="5062000" />
     </task>
     <task id="LOCAL-00001" summary="Refactoring">
       <created>1639244661465</created>
