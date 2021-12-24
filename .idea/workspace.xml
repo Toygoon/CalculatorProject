@@ -12,7 +12,6 @@
     <list default="true" id="ead0d7fd-fe62-4952-b30f-8a19dfe41c54" name="Changes" comment="Editing .gitignore for artifact builds">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/toygoon/calculator/AlertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/toygoon/calculator/AlertController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/toygoon/calculator/CalcController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/toygoon/calculator/CalcController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/toygoon/calculator/CalcMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/toygoon/calculator/CalcMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,13 +56,13 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/gradlew" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/com/toygoon/calculator/calculator.fxml" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/module-info.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/java/com/toygoon/calculator/CalcMain.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/gradlew.bat" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/build.gradle" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/java/com/toygoon/calculator/CalcController.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/main/resources/com/toygoon/calculator/calculator.fxml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/java/com/toygoon/calculator/CalcMain.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/gradlew" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/gradlew.bat" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />

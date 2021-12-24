@@ -16,6 +16,8 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.stage.WindowEvent;
 
+import static com.toygoon.calculator.AlertController.*;
+
 public class CalcMain extends Application {
     @Override
     public void start(Stage stage) throws Exception {
@@ -40,7 +42,7 @@ public class CalcMain extends Application {
         stage.setOnCloseRequest(new EventHandler<WindowEvent>() {
             @Override
             public void handle(WindowEvent event) {
-                new AlertController().confirmExit();
+                confirmExit(event);
             }
         });
 
