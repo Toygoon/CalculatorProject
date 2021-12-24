@@ -155,7 +155,7 @@ public class CalculateNumbers {
 
         // 결과가 무한인 경우, 예외 처리
         if(Double.isInfinite(result)) {
-            showError("Calculation from " + first + "is infinity value.");
+            showError("Calculation from " + first + " is infinity value.");
             return "0";
         }
 
