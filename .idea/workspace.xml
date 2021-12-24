@@ -9,10 +9,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ead0d7fd-fe62-4952-b30f-8a19dfe41c54" name="Changes" comment="Editing .gitignore for artifact builds">
+    <list default="true" id="ead0d7fd-fe62-4952-b30f-8a19dfe41c54" name="Changes" comment="Close handler finalize">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/toygoon/calculator/AlertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/toygoon/calculator/AlertController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/toygoon/calculator/CalcMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/toygoon/calculator/CalcMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/toygoon/calculator/CalculateNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/toygoon/calculator/CalculateNumbers.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -253,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639540513767</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Close handler finalize">
+      <created>1640364114777</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1640364114777</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,6 +292,7 @@
     <MESSAGE value="Remove unused constructors in AlertController" />
     <MESSAGE value="Adding icons, manifests" />
     <MESSAGE value="Editing .gitignore for artifact builds" />
-    <option name="LAST_COMMIT_MESSAGE" value="Editing .gitignore for artifact builds" />
+    <MESSAGE value="Close handler finalize" />
+    <option name="LAST_COMMIT_MESSAGE" value="Close handler finalize" />
   </component>
 </project>

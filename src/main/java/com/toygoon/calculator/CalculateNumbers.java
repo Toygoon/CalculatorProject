@@ -114,6 +114,8 @@ public class CalculateNumbers {
                 return "hex(" + num + ") = ";
             case "BINARY":
                 return "bin(" + num + ") = ";
+            case "POWER":
+                return "square(" + num + ") = ";
         }
 
         return null;
@@ -148,6 +150,13 @@ public class CalculateNumbers {
             case "BINARY" -> {
                 return Integer.toBinaryString(Integer.parseInt(first));
             }
+            case "POWER" -> result = Math.pow(a, 2);
+        }
+
+        // 결과가 무한인 경우, 예외 처리
+        if(Double.isInfinite(result)) {
+            showError("Calculation from " + first + "is infinity value.");
+            return "0";
         }
 
         // Int와 Double을 구분하여 String 형식으로 저장
