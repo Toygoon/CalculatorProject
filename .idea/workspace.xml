@@ -9,9 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ead0d7fd-fe62-4952-b30f-8a19dfe41c54" name="Changes" comment="Close handler finalize">
+    <list default="true" id="ead0d7fd-fe62-4952-b30f-8a19dfe41c54" name="Changes" comment="' '">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/toygoon/calculator/CalculateNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/toygoon/calculator/CalculateNumbers.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +84,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="C:/Program Files/Java/jdk-17.0.1/lib/javafx-sdk-17.0.1/lib" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15292233" />
     <property name="project.structure.side.proportion" value="0.51954025" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -132,6 +131,7 @@
       <workItem from="1639539591345" duration="755000" />
       <workItem from="1639540418236" duration="878000" />
       <workItem from="1640327159646" duration="5062000" />
+      <workItem from="1640406729657" duration="1023000" />
     </task>
     <task id="LOCAL-00001" summary="Refactoring">
       <created>1639244661465</created>
@@ -259,7 +259,21 @@
       <option name="project" value="LOCAL" />
       <updated>1640364114777</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Square calculation">
+      <created>1640364816866</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1640364816866</updated>
+    </task>
+    <task id="LOCAL-00020" summary="' '">
+      <created>1640364921504</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1640364921504</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,6 +307,8 @@
     <MESSAGE value="Adding icons, manifests" />
     <MESSAGE value="Editing .gitignore for artifact builds" />
     <MESSAGE value="Close handler finalize" />
-    <option name="LAST_COMMIT_MESSAGE" value="Close handler finalize" />
+    <MESSAGE value="Square calculation" />
+    <MESSAGE value="' '" />
+    <option name="LAST_COMMIT_MESSAGE" value="' '" />
   </component>
 </project>
