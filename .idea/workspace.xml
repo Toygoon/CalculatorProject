@@ -9,8 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ead0d7fd-fe62-4952-b30f-8a19dfe41c54" name="Changes" comment="Typo">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ead0d7fd-fe62-4952-b30f-8a19dfe41c54" name="Changes" comment="Clean up">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/toygoon/calculator/CalcLauncher.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
@@ -86,7 +86,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="C:/Program Files/Java/jdk-17.0.1/lib/javafx-sdk-17.0.1/lib" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15292233" />
     <property name="project.structure.side.proportion" value="0.51954025" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
