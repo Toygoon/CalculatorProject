@@ -43,6 +43,8 @@ test {
     useJUnitPlatform()
 }
 
+mainClassName = 'com.toygoon.calculator.CalcLauncher'
+
 jar {
     manifest {
         attributes 'Main-Class': 'com.toygoon.calculator.CalcLauncher'
