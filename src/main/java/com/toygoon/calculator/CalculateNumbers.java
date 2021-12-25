@@ -13,13 +13,13 @@ public class CalculateNumbers {
     private static final String[] OPERANDS = {"PLUS", "MINUS", "MULTIPLE", "DIVIDE", "MOD", "AND", "OR", "NOR", "XOR", "SHIFTLEFT", "SHIFTRIGHT"};
     // 특수 함수 목록
     private static final String[] ALL_FUNCTIONS = {"SIN", "COS", "TAN", "FACTORIAL", "SQRT", "SECANT", "COSECANT", "COTANGENT", "COMMONLOG", "NATURALLOG", "COMPLEMENT", "LOG2"
-                                                    ,"HEXA", "BINARY", "POWER"};
+            , "HEXA", "BINARY", "POWER"};
 
 
     /* 연산자를 구분하는 메서드 */
     public static boolean isOperands(String input) {
-        for(String s : OPERANDS) {
-            if(input.equals(s))
+        for (String s : OPERANDS) {
+            if (input.equals(s))
                 return true;
         }
 
@@ -28,8 +28,8 @@ public class CalculateNumbers {
 
     /* 특수 함수를 구분하는 메서드 */
     public static boolean isFunctions(String input) {
-        for(String s : ALL_FUNCTIONS) {
-            if(input.equals(s))
+        for (String s : ALL_FUNCTIONS) {
+            if (input.equals(s))
                 return true;
         }
 
@@ -41,14 +41,14 @@ public class CalculateNumbers {
         String result = null;
 
         // 실수인 경우와 정수인 경우를 구분
-        if(input.contains(".")) {
+        if (input.contains(".")) {
             double d = Double.parseDouble(input), res = 1;
 
-            for(double i=1; i<=d; i++)
+            for (double i = 1; i <= d; i++)
                 res *= i;
 
             result = Double.toString(res);
-        } else if(Integer.parseInt(input) == 0) {
+        } else if (Integer.parseInt(input) == 0) {
             // 0과의 곱인 경우 0을 반환, 나머지 경우는 1부터 계산함
             result = "0";
         } else {
@@ -62,7 +62,7 @@ public class CalculateNumbers {
 
         // 범위를 넘어간 경우, 오류 출력
         // 입력 값은 0이 아니지만, 출력 값은 0인 경우 무한임
-        if(!(input.equals("0")) && result.equals("0")) {
+        if (!(input.equals("0")) && result.equals("0")) {
             showError("Factorial of " + input + " is not a number.");
         }
 
@@ -89,7 +89,7 @@ public class CalculateNumbers {
 
     /* FXML의 연산자 값을 실제 기호로 변환하는 메서드 */
     public static String getFunctExpr(String num, String data) {
-        switch(data) {
+        switch (data) {
             case "SIN":
                 return "sin(" + num + ") = ";
             case "COS":
@@ -128,7 +128,7 @@ public class CalculateNumbers {
         double result = 0;
 
         /* 단항 연산자 연산 */
-        switch(funct) {
+        switch (funct) {
             case "SIN" -> result = Math.sin(a);
             case "COS" -> result = Math.cos(a);
             case "TAN" -> result = Math.tan(a);
@@ -154,13 +154,13 @@ public class CalculateNumbers {
         }
 
         // 결과가 무한인 경우, 예외 처리
-        if(Double.isInfinite(result)) {
+        if (Double.isInfinite(result)) {
             showError("Calculation from " + first + " is infinity value.");
             return "0";
         }
 
         // Int와 Double을 구분하여 String 형식으로 저장
-        if((int) result == result)
+        if ((int) result == result)
             return String.valueOf((int) result);
         else
             return String.valueOf(result);
@@ -169,7 +169,7 @@ public class CalculateNumbers {
     /* 연산을 수행하는 메서드 */
     public static String calcResults(String first, String second, String operand) {
         // 피연산자 중 하나라도 존재하지 않으면, 둘 중 하나의 값을 반환
-        if(first.equals("") || second.equals(""))
+        if (first.equals("") || second.equals(""))
             return first + second;
 
         // 첫 번째 피연산자, 두 번째 피연산자의 값을 Double로 캐스팅
@@ -179,18 +179,18 @@ public class CalculateNumbers {
         double result = 0;
 
         // 0으로는 나눌 수 없음
-        if(operand.equals("DIVIDE") && (a == 0 || b == 0)) {
+        if (operand.equals("DIVIDE") && (a == 0 || b == 0)) {
             showError("Can't divide with 0.");
             return "0";
         }
 
         // 연산자에 따라 연산 방식을 달리함
-        switch(operand) {
-            case "PLUS" -> result = a+b;
-            case "MINUS" -> result = a-b;
-            case "MULTIPLE" -> result = a*b;
-            case "DIVIDE" -> result = a/b;
-            case "MOD" -> result = a%b;
+        switch (operand) {
+            case "PLUS" -> result = a + b;
+            case "MINUS" -> result = a - b;
+            case "MULTIPLE" -> result = a * b;
+            case "DIVIDE" -> result = a / b;
+            case "MOD" -> result = a % b;
             case "AND" -> {
                 return Integer.toString(Integer.parseInt(first) & Integer.parseInt(second));
             }
@@ -210,7 +210,7 @@ public class CalculateNumbers {
         }
 
         // Int와 Double을 구분하여 String 형식으로 저장
-        if((int) result == result)
+        if ((int) result == result)
             return String.valueOf((int) result);
         else
             return String.valueOf(result);

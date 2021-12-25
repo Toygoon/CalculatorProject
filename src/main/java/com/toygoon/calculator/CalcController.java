@@ -7,13 +7,10 @@
 package com.toygoon.calculator;
 
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import javafx.scene.input.KeyEvent;
 
 import static com.toygoon.calculator.AlertController.*;
 import static com.toygoon.calculator.CalculateNumbers.*;
@@ -45,23 +42,23 @@ public class CalcController {
         Node node = (Node) event.getSource();
         String data = (String) node.getUserData();
 
-        if(data.equals("CLEAR")) {
+        if (data.equals("CLEAR")) {
             /* C를 눌렀을 경우 */
             // 각 요소 초기화
             operand = "";
             prevNum = "";
             // 연산 중인 자료가 있다면, 초기화 하고 리스트에서 삭제
-            if(isOperating) {
+            if (isOperating) {
                 list_history.getItems().remove(listTop);
             }
             isOperating = false;
             // 리스트에 있는 내용 삭제
             field_calc.setText("");
-        } else if(data.equals("EQUAL")) {
+        } else if (data.equals("EQUAL")) {
             /* =를 눌렀을 경우 */
             // 만약 연산 중이라면, 연산 결과를 출력하는 작업 수행
-            if(isOperating) {
-                if(field_calc.getText().equals("")) {
+            if (isOperating) {
+                if (field_calc.getText().equals("")) {
                     // 이전에 입력한 연산자 없이 피연산자만 있는 경우, 피연산자를 출력함
                     field_calc.setText(prevNum);
                     // 피연산자만 있으므로, 연산 중인 상태가 아님
@@ -86,30 +83,30 @@ public class CalcController {
                     listTop++;
                 }
             }
-        } else if(data.equals("NEGATIVE")) {
+        } else if (data.equals("NEGATIVE")) {
             /* 양수, 음수 변환 버튼을 눌렀을 경우 */
             // 현재 입력된 숫자를 저장하는 변수
             String num = field_calc.getText();
-            if(num.length() == 0) {
+            if (num.length() == 0) {
                 // 입력 값이 없으면 아무것도 하지 않음
-            } else if(num.charAt(0) == '-') {
+            } else if (num.charAt(0) == '-') {
                 // 음수인 경우, (맨 앞의 글자가 -인 경우) StringBuilder를 이용해 이를 삭제
                 field_calc.setText(new StringBuilder(num).deleteCharAt(0).toString());
             } else {
                 // 양수인 경우, -만 추가
                 field_calc.setText("-" + num);
             }
-        } else if(data.equals("DOT")) {
+        } else if (data.equals("DOT")) {
             /* .을 눌렀을 경우 */
             // 소숫점이 여러 개 존재 할 수 없으므로, isDotPressed 변수를 이용하여 확인
-            if(!isDotPressed) {
+            if (!isDotPressed) {
                 // 만약 isDotPressed가 false라면, 소숫점을 입력
                 field_calc.setText(field_calc.getText() + ".");
                 // 입력 이후 isDotPressed 변수를 초기화
                 isDotPressed = true;
             }
             // field의 값을 직접 수정했을 경우가 있으므로, field의 값을 다시 확인하여 isDotPressed를 한 번 더 변경
-            if(field_calc.getText().contains(".")) {
+            if (field_calc.getText().contains(".")) {
                 // 확인하여 isDotPressed의 값을 갱신
                 isDotPressed = true;
             } else {
@@ -117,7 +114,7 @@ public class CalcController {
                 field_calc.setText(field_calc.getText() + ".");
                 isDotPressed = true;
             }
-        } else if(isOperands(data)) {
+        } else if (isOperands(data)) {
             /* 연산자를 입력 받은 경우 */
             // 이미 연산 중인 연산자가 존재하고, 새로운 값을 입력 받은 후에는 이전 연산을 완료하도록 함
             if (isOperating) {
@@ -160,11 +157,11 @@ public class CalcController {
                     list_history.getItems().add(listTop, prevNum + " " + getOperands(operand));
                 }
             }
-        } else if(isFunctions(data)) {
+        } else if (isFunctions(data)) {
             /* 다른 특수 함수를 입력받은 경우 */
             String num = field_calc.getText();
 
-            if(!(num.equals(""))) {
+            if (!(num.equals(""))) {
                 field_calc.setText(calcFunctResults(num, data));
                 list_history.getItems().add(listTop, getFunctExpr(num, data) + field_calc.getText());
                 listTop++;
@@ -175,7 +172,7 @@ public class CalcController {
             field_calc.setText(field_calc.getText() + data);
         }
 
-        if(field_calc.getText().equals("NaN")) {
+        if (field_calc.getText().equals("NaN")) {
             showError("It's not a number.");
             field_calc.setText("");
         }
@@ -192,11 +189,11 @@ public class CalcController {
         int length = prv.length();
 
         // length가 0이면 return
-        if(length == 0)
+        if (length == 0)
             return;
 
         // StringBuilder를 이용하여 맨 마지막의 글자를 지워줌
-        field_calc.setText(new StringBuilder(prv).deleteCharAt(length-1).toString());
+        field_calc.setText(new StringBuilder(prv).deleteCharAt(length - 1).toString());
     }
 
     /* Clear List 구현 메서드 */

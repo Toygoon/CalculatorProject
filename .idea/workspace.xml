@@ -9,12 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ead0d7fd-fe62-4952-b30f-8a19dfe41c54" name="Changes" comment="Release 1.0">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Calculator_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Calculator.xml" beforeDir="false" />
+    <list default="true" id="ead0d7fd-fe62-4952-b30f-8a19dfe41c54" name="Changes" comment="Revert releasing">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +84,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="C:/Utils/javafx-sdk-17.0.1/bin/vcruntime140_1.dll" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15292233" />
     <property name="project.structure.side.proportion" value="0.51954025" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -136,6 +132,7 @@
       <workItem from="1639540418236" duration="878000" />
       <workItem from="1640327159646" duration="5062000" />
       <workItem from="1640406729657" duration="1100000" />
+      <workItem from="1640411592445" duration="1997000" />
     </task>
     <task id="LOCAL-00001" summary="Refactoring">
       <created>1639244661465</created>
@@ -291,7 +288,14 @@
       <option name="project" value="LOCAL" />
       <updated>1640409506751</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Revert releasing">
+      <created>1640410953527</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1640410953527</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,6 +333,7 @@
     <MESSAGE value="' '" />
     <MESSAGE value="Typo" />
     <MESSAGE value="Release 1.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Release 1.0" />
+    <MESSAGE value="Revert releasing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert releasing" />
   </component>
 </project>

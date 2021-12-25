@@ -52,7 +52,7 @@ public class AlertController {
         alert.getButtonTypes().setAll(okButton, cancelButton);
         // ButtonData != YES 일 경우 계속
         alert.showAndWait().ifPresent(type -> {
-            if(type.getButtonData() != YES) {
+            if (type.getButtonData() != YES) {
                 event.consume();
             }
         });
