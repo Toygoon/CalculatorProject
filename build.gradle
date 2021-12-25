@@ -25,7 +25,7 @@ tasks.withType(JavaCompile) {
 
 application {
     mainModule = 'com.toygoon.calculator'
-    mainClass = 'com.toygoon.calculator.calcMain'
+    mainClass = 'com.toygoon.calculator.CalcMain'
 }
 
 javafx {
