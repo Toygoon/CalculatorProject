@@ -80,7 +80,7 @@ public class CalculateNumbers {
             case "MOD" -> "%";
             case "AND" -> "&";
             case "OR" -> "|";
-            case "XOR" -> "^";
+            case "NOR" -> "^";
             case "SHIFTLEFT" -> "<<";
             case "SHIFTRIGHT" -> ">>";
             default -> null;
